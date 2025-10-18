@@ -1,0 +1,26 @@
+{
+  "version": "0.0.0.1",
+  "configurations": [
+    {
+      "name": "Run main",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "main.main",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Run deneme",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "deneme.deneme",
+      "cwd": "${workspaceFolder}"
+    },
+     {
+      "name": "Run breakout",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uptime_breakout.breakout",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

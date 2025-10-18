@@ -1,0 +1,133 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0" version="28.2.6">
+  <diagram name="Page-1" id="28mnmZYroUwdQ_IfKjj4">
+    <mxGraphModel dx="574" dy="1446" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-1" value="telegram_listener func()" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="50" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-2" value="start_stop.db" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="310" y="-10" width="90" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-3" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-1" target="LP3ct_I7FR9qpUuiFjJL-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="100" as="sourcePoint" />
+            <mxPoint x="260" y="50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-4" value="order" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="LP3ct_I7FR9qpUuiFjJL-3">
+          <mxGeometry x="-0.1632" relative="1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-5" value="stoploss.controller func() (tek task olarak çağrılır)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="200" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-6" value="profit_dist.controller func() (tek task olarak çağrılır)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="290" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-7" value="getBal.main&lt;div&gt;func()&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(tek task olarak çağrılır)&lt;/span&gt;&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="380" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-8" value="getPos.main&lt;div&gt;func()&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(tek task olarak çağrılır)&lt;/span&gt;&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="470" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-9" value="dataGetter.main&lt;div&gt;func() (bağımsız çalışır.)&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="-140" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-16" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-10" target="LP3ct_I7FR9qpUuiFjJL-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290" y="225" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-17" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-10" target="LP3ct_I7FR9qpUuiFjJL-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-18" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-10" target="LP3ct_I7FR9qpUuiFjJL-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-19" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-10" target="LP3ct_I7FR9qpUuiFjJL-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-24" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-10" target="LP3ct_I7FR9qpUuiFjJL-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-27" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-10" target="LP3ct_I7FR9qpUuiFjJL-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-29" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-10" target="LP3ct_I7FR9qpUuiFjJL-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-32" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-10" target="LP3ct_I7FR9qpUuiFjJL-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-33" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-10" target="LP3ct_I7FR9qpUuiFjJL-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-38" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-10" target="LP3ct_I7FR9qpUuiFjJL-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-39" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-10" target="LP3ct_I7FR9qpUuiFjJL-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-10" value="asenkron_task_manager.main&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;func()&lt;/span&gt;&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="180" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-11" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;exitX=0.413;exitY=0.966;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="250" as="sourcePoint" />
+            <mxPoint x="410" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-12" value="order" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;" vertex="1" connectable="0" parent="LP3ct_I7FR9qpUuiFjJL-11">
+          <mxGeometry x="-0.2353" y="-3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-15" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-14" target="LP3ct_I7FR9qpUuiFjJL-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-14" value="başla" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="-80" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-20" value="eş zamanlı ve birbirinden bağımsız" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="150" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-21" value="pscloser.normal_closer&lt;div&gt;func() (tek sefer tüm pozisyonlar için çalıştırılır)&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(tek task olarak çağrılır)&lt;/span&gt;&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="580" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-22" value="pscloser.added_profit_closer&lt;div&gt;func() (her pozisyon için ayrı task olarak çalışır)&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="680" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-23" value="pscloser.added_stoploss_closer&lt;div&gt;func() (her pozisyon için ayrı task olarak çalışır)&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="870" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-25" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.014;entryY=0.329;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-10" target="LP3ct_I7FR9qpUuiFjJL-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-28" value="breakoutController.main&lt;div&gt;func() (her sembol ve her key için ayrı task olarak çalıştırılır&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="510" y="290" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-30" value="breakoutController.opener.main&lt;div&gt;func() ( her sembol için ayrı task olarak çalıştırılır)&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="420" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-31" value="breakoutController.closer.main&lt;div&gt;func() ( her sembol için ayrı task olarak çalıştırılır)&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="530" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-34" value="leverage_Controller.main() (tek task olarak çağırılır)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="140" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-35" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.001;entryY=0.603;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="LP3ct_I7FR9qpUuiFjJL-10" target="LP3ct_I7FR9qpUuiFjJL-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-36" value="loss_reduction.stoploss_calculator.main&lt;div&gt;func() (tek task olarak çağırılır)&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="10" width="230" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LP3ct_I7FR9qpUuiFjJL-37" value="loss_reduction.stoploss_reducer.main&lt;div&gt;func() (tek task olarak çağırılır)&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="-120" width="230" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,120 @@
+import requests
+import asyncio
+from core.main.indicators import AdvancedTechnicalIndicatorsFibLevels
+import sqlite3
+import pandas as pd
+from typing import List, Dict, Any
+import sqlite3
+import os
+import json
+import csv
+
+import ccxt.async_support as ccxt
+import json
+import re
+from typing import Dict, Any, List
+from core.utils.dbProcess import DBReader, SQLiteManager
+
+"""variables = {
+    "last_price": 120,
+    "fib": 100,
+    "rsi_1m": 70,
+    "rsi_5m": 90,
+    "atr_1m": 100,
+    "atr_5m": 5,
+    "atr_15m": 8,
+    "volume_1m": 4,
+    "avg_3": 3,
+    "volume_5m": 1,
+    "avg_5": 5,
+}
+
+# Evaluator oluştur
+evaluator = RuleEvaluator()
+
+# JSON'dan yükle
+evaluator.load_rules_from_dict(
+    "core/envFiles/config.json", "bigTimeframes", "breakout1"
+)
+
+# Tek bir kuralı ID ile test et
+print("Kural 1 sonucu:", evaluator.evaluate_condition("1", variables))  # True
+print("Kural 2 sonucu:", evaluator.evaluate_condition("2", variables))  # True
+
+# Doğrudan condition string test et
+print(
+    "Doğrudan condition testi:",
+    evaluator.evaluate_condition("rsi_1m>60 and rsi_5m>80", variables),
+)  # True
+
+# Tüm kuralları değerlendir
+result = evaluator.evaluate_all_rules(variables)
+print("\nTüm sonuçlar:", result["all_passed"], result)
+
+# True dönen kural ID'lerini al
+print("Uyan kurallar:", evaluator.get_matching_rules(variables))
+
+# Ekrana detaylı çıktı yazdır
+print("\n--- KURAL DURUM TABLOSU ---")
+evaluator.print_rule_status(variables)
+print(evaluator.get_rule_variables("1"))"""
+
+"""
+dosyadaki kuralları , piyasayı dinleyerek test eden
+parametreler: symbol,timeframes,rule_ids
+
+aşağıdakiler config.json dosyası içinde yer alır
+ana kırılım çeşitleri:
+    büyük zaman dilimi kırılımları
+    küçük zaman dilimi kırılımları
+alt kırılım çeşitleri
+kırılım1: yükselen dalga için dalga devam kırılımı(fib0ın üstüne kırıldı mı)
+kırılım2: yükselen dalga için dalga bitiş kırılımı(fib1in altına kırılım)
+kırılım3: düşen dalga için dalga devam kırılımı(fib0 altına kırılım)
+kırılım4: düşen dalga için dalga bitiş kırılımı(fib1 üstüne kırılım)
+
+piyasa izleyici: kırılım olduktan sonra, kırılım, kırılım yönünde devam eder mi(diff indicatorler)
+
+bütün semboller için aynı anda dinlenir ve bunlar dataya kaydedilir
+
+kural1: her zaman fib değeri kontrolüdür.
+diğer kurallar değişkendir
+
+
+diğer kuralların formatı:
+rsi_1m>50 and rsi_5m>70 and rsi_15m>80 kural 2
+diğer kurallarda her kural belli bir piyasa metriğini kontrol eder(mesela momentum)
+her kuralda farklı zaman dilimleri vardır
+
+"""
+
+
+# açık olan pozisyonları dbden okur,
+# timreframelere göre beklenen karları hesaplar, komisyonlar düştürkten sonra
+
+
+# get all leverage
+
+
+"""asc = GeneratorTimeframe()
+import time
+from multiprocessing import Pool
+
+
+def task(symbol, timeframe):
+    asyncio.run(asc.extract_d_analysis(symbol, timeframe))
+
+
+if __name__ == "__main__":
+    basla = time.time()
+    dbb = DBReader("binance_data/ohlcv.db")
+    symbol_list = dbb.get_table_names()
+    dbb.close()
+    print(symbol_list)
+    timeframes = ["1min"]
+    with Pool(processes=len(timeframes)) as pool:
+        pool.starmap(
+            task, [(symbol, ts) for symbol in symbol_list for ts in timeframes]
+        )
+    print("Toplam genel süre:", time.time() - basla)
+"""

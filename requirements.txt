@@ -1,0 +1,9 @@
+PyQt5
+aiohttp
+ccxt
+numpy
+pandas
+psutil
+requests
+ta
+websockets

@@ -1,0 +1,14 @@
+{
+  "python.analysis.extraPaths": ["${workspaceFolder}"],
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "python.testing.pytestArgs": [
+    "core"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python-envs.pythonProjects": [],
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  }
+}

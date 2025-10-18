@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36 Edg/141.0.0.0" version="28.2.7">
+  <diagram name="Page-1" id="qoL7b9j7Pa4jVx_CtvIF">
+    <mxGraphModel dx="1273" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-1" value="Başla: main fonksiyonu" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="224" y="20" width="226" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-2" value="sembol ve anahtar parametreleri al" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="207" y="124" width="260" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-3" value="OHLCV verilerini getir&#xa;data_getter.get_ohlcv_data" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="207" y="252" width="260" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-4" value="Trade işlemini dinle&#xa;trader.listen_exchange" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="215" y="380" width="243" height="243" as="geometry" />
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-5" value="Breakout verisini yaz&#xa;breakout_getter.write_breakout_data" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="698" width="333" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-6" value="True döndür - Kural geçti" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="66" y="838" width="241" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-7" value="False döndür - Kural geçmedi" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="357" y="826" width="260" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-8" value="Bitiş" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="291" y="954" width="91" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-9" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="BbGvw2f2d9B6M_ynp8sO-1" target="BbGvw2f2d9B6M_ynp8sO-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-10" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="BbGvw2f2d9B6M_ynp8sO-2" target="BbGvw2f2d9B6M_ynp8sO-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-11" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="BbGvw2f2d9B6M_ynp8sO-3" target="BbGvw2f2d9B6M_ynp8sO-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-12" value="True döndü" style="curved=1;startArrow=none;endArrow=block;exitX=0.03;exitY=1;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="BbGvw2f2d9B6M_ynp8sO-4" target="BbGvw2f2d9B6M_ynp8sO-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="186" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-13" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="BbGvw2f2d9B6M_ynp8sO-5" target="BbGvw2f2d9B6M_ynp8sO-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-14" value="False döndü" style="curved=1;startArrow=none;endArrow=block;exitX=0.97;exitY=1;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="BbGvw2f2d9B6M_ynp8sO-4" target="BbGvw2f2d9B6M_ynp8sO-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="487" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-15" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0;entryY=0.2;rounded=0;" edge="1" parent="1" source="BbGvw2f2d9B6M_ynp8sO-6" target="BbGvw2f2d9B6M_ynp8sO-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="186" y="929" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BbGvw2f2d9B6M_ynp8sO-16" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=1;entryY=0.2;rounded=0;" edge="1" parent="1" source="BbGvw2f2d9B6M_ynp8sO-7" target="BbGvw2f2d9B6M_ynp8sO-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="487" y="929" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
