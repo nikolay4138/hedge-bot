@@ -1,0 +1,151 @@
+<mxfile host="app.diagrams.net" agent="GPT-Generated" version="28.2.7">
+  <diagram name="Оркестратор на задачите" id="bg-page-1">
+    <mxGraphModel dx="1273" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Start -->
+        <mxCell id="bg1-start" value="Старт" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="-80" width="120" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Telegram listener -->
+        <mxCell id="bg1-telegram" value="telegram_listener функция()" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="50" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <!-- startstop db -->
+        <mxCell id="bg1-startstop" value="startstop.db" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="310" y="-10" width="110" height="70" as="geometry"/>
+        </mxCell>
+        <!-- Edge: start -> telegram -->
+        <mxCell id="bg1-e-start-telegram" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1" source="bg1-start" target="bg1-telegram">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="100" as="sourcePoint"/>
+            <mxPoint x="260" y="50" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- Edge: telegram -> startstop -->
+        <mxCell id="bg1-e-telegram-startstop" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1" source="bg1-telegram" target="bg1-startstop">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="250" as="sourcePoint"/>
+            <mxPoint x="410" y="180" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <!-- Task Manager -->
+        <mxCell id="bg1-taskmgr" value="Асинхронен Task Manager – main()" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="180" width="220" height="90" as="geometry"/>
+        </mxCell>
+        <!-- Edge: startstop -> taskmgr -->
+        <mxCell id="bg1-e-startstop-taskmgr" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1" source="bg1-startstop" target="bg1-taskmgr">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Info text -->
+        <mxCell id="bg1-info" value="едновременно и взаимно независими" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="150" width="220" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Left column processes -->
+        <mxCell id="bg1-stoploss" value="stoploss.controller функция() (единична задача)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="200" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg1-profitdist" value="profit_dist.controller функция() (единична задача)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="290" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg1-getbal" value="getBal.main функция() (единична задача)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="380" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg1-getpos" value="getPos.main функция() (единична задача)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="470" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg1-pscloser" value="pscloser.normal_closer функция() (веднъж за всички позиции)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="560" width="240" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg1-pscloser-profit" value="pscloser.added_pos_profit_closer функция (по една задача за позиция)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="640" width="260" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg1-pscloser-stop" value="pscloser.added_pos_stop_closer функция (по една задача за позиция)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="750" width="260" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Right column processes -->
+        <mxCell id="bg1-breakout-main" value="breakoutController.main функция (за всеки символ и ключ)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="290" width="220" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg1-breakout-opener" value="breakoutController.opener.main функция (за всеки символ)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="380" width="220" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg1-breakout-closer" value="breakoutController.closer.main функция (за всеки символ)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="470" width="220" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg1-leverage" value="leverage_controller.main() (единична задача)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="170" width="220" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg1-loss-calc" value="loss_reductioner.stoploss_calculator.main (единична задача)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="80" width="260" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg1-loss-red" value="loss_reductioner.stoploss_reducer.main (единична задача)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="-20" width="260" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg1-datagetter" value="dataGetter.main функция (работи самостоятелно)" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="-140" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges from task manager to left column -->
+        <mxCell id="bg1-e-tm-stoploss" style="edgeStyle=none;curved=1;rounded=0;html=1;startSize=8;endSize=8;" edge="1" parent="1" source="bg1-taskmgr" target="bg1-stoploss"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg1-e-tm-profitdist" style="edgeStyle=none;curved=1;rounded=0;html=1;startSize=8;endSize=8;" edge="1" parent="1" source="bg1-taskmgr" target="bg1-profitdist"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg1-e-tm-getbal" style="edgeStyle=none;curved=1;rounded=0;html=1;startSize=8;endSize=8;" edge="1" parent="1" source="bg1-taskmgr" target="bg1-getbal"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg1-e-tm-getpos" style="edgeStyle=none;curved=1;rounded=0;html=1;startSize=8;endSize=8;" edge="1" parent="1" source="bg1-taskmgr" target="bg1-getpos"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg1-e-tm-pscloser" style="edgeStyle=none;curved=1;rounded=0;html=1;startSize=8;endSize=8;" edge="1" parent="1" source="bg1-taskmgr" target="bg1-pscloser"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg1-e-tm-pscloser-profit" style="edgeStyle=none;curved=1;rounded=0;html=1;startSize=8;endSize=8;" edge="1" parent="1" source="bg1-taskmgr" target="bg1-pscloser-profit"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg1-e-tm-pscloser-stop" style="edgeStyle=none;curved=1;rounded=0;html=1;startSize=8;endSize=8;" edge="1" parent="1" source="bg1-taskmgr" target="bg1-pscloser-stop"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <!-- Edges from task manager to right column -->
+        <mxCell id="bg1-e-tm-breakout-main" style="edgeStyle=none;curved=1;rounded=0;html=1;startSize=8;endSize=8;" edge="1" parent="1" source="bg1-taskmgr" target="bg1-breakout-main"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg1-e-tm-breakout-opener" style="edgeStyle=none;curved=1;rounded=0;html=1;startSize=8;endSize=8;" edge="1" parent="1" source="bg1-taskmgr" target="bg1-breakout-opener"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg1-e-tm-breakout-closer" style="edgeStyle=none;curved=1;rounded=0;html=1;startSize=8;endSize=8;" edge="1" parent="1" source="bg1-taskmgr" target="bg1-breakout-closer"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg1-e-tm-leverage" style="edgeStyle=none;curved=1;rounded=0;html=1;startSize=8;endSize=8;" edge="1" parent="1" source="bg1-taskmgr" target="bg1-leverage"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg1-e-tm-loss-calc" style="edgeStyle=none;curved=1;rounded=0;html=1;startSize=8;endSize=8;" edge="1" parent="1" source="bg1-taskmgr" target="bg1-loss-calc"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg1-e-tm-loss-red" style="edgeStyle=none;curved=1;rounded=0;html=1;startSize=8;endSize=8;" edge="1" parent="1" source="bg1-taskmgr" target="bg1-loss-red"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram name="Breakout – основен поток" id="bg-page-2">
+    <mxGraphModel dx="1273" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="bg2-1" value="Старт: функция main" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="224" y="20" width="226" height="54" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg2-2" value="Вземи параметрите: символ и ключ" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="207" y="124" width="260" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg2-3" value="Извлечи OHLCV данни – data_getter.get_ohlcv_data" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="207" y="252" width="260" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg2-4" value="Оцени правило/сигнал – trader.listen_exchange" style="rhombus;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="215" y="380" width="243" height="243" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg2-5" value="Запиши пробива – breakout_getter.write_breakout_data" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="698" width="333" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg2-6" value="Върни True – правилото е изпълнено" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="66" y="838" width="241" height="54" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg2-7" value="Върни False – правилото не е изпълнено" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="357" y="826" width="260" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg2-8" value="Край" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="291" y="954" width="91" height="54" as="geometry"/>
+        </mxCell>
+        <mxCell id="bg2-e1" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="bg2-1" target="bg2-2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg2-e2" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="bg2-2" target="bg2-3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg2-e3" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="bg2-3" target="bg2-4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg2-ltrue" value="Върна True" style="curved=1;startArrow=none;endArrow=block;exitX=0.03;exitY=1;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="bg2-4" target="bg2-5"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="186" y="660"/></Array></mxGeometry></mxCell>
+        <mxCell id="bg2-e5" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="bg2-5" target="bg2-6"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="bg2-lfalse" value="Върна False" style="curved=1;startArrow=none;endArrow=block;exitX=0.97;exitY=1;entryX=0.5;entryY=-0.01;rounded=0;" edge="1" parent="1" source="bg2-4" target="bg2-7"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="487" y="660"/></Array></mxGeometry></mxCell>
+        <mxCell id="bg2-e7" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=1;entryY=0.2;rounded=0;" edge="1" parent="1" source="bg2-7" target="bg2-8"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="487" y="929"/></Array></mxGeometry></mxCell>
+        <mxCell id="bg2-e6" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=0.99;entryX=0;entryY=0.2;rounded=0;" edge="1" parent="1" source="bg2-6" target="bg2-8"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="186" y="929"/></Array></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
